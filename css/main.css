@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.li:before {
+    content:”\00A3″; font-family: “Font Awesome 5 Free“; font-weight: 900; }
+
+html, body {
+
+    height: 100%;
+    background: rgba(36, 36, 36, 1.0);
+    background: linear-gradient(180deg, rgba(36, 36, 36, 1.0), rgba(14, 14, 14, 1.0));
+}
+
+img.img--small {
+    width: 200px;
+    display:inline;
+}
+
+p, li {
+    font-size: 1.075em;
+    line-height: 1.50em;
+}
+
+a.a--small {
+    font-size: 1.075em;
+    text-decoration: none;
+}
+
+a.a__primary {
+    color: #1f6feb;
+}
+
+p, h1, h2, h3, h4, h5, h6, a, li {
+    font-family: 'Libre Franklin', monospace;
+    color: #d9d9d9;
+}
+
+ul {
+    list-style: none;
+}
+
+li.list--block {
+    display: block;
+}
+
+li {
+    display:inline-block;
+}
+
+li > a {
+    font-size: 2.25em;
+
+}
+
+
+h1 { font-size: 1.65em; }
+h2 { font-size: 1.45em; }
+h3, h4, h5, h6 { font-size: 1.25em; }
+h1, h2 {
+    font-weight: bolder 900 !important;
+}
+
+.btn {
+    width: 75px;
+    text-align: center;
+    padding: 10px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
+.btn:hover {
+    opacity: 0.7;
+    transition: opacity 0.5s ease-in;
+}
+
+.btn--primary {
+    background-color: #1f6feb;
+}
+
+.btn > a {
+    color: #d9d9d9;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bolder 900 !important;
+}
+
+
+.header__container {
+   background-color: #161b22;
+   box-shadow:
+   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+   0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+   0 12.5px 10px rgba(0, 0, 0, 0.06),
+   0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+   0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+   0 100px 80px rgba(0, 0, 0, 0.12);
+   margin-bottom: 1.25em;
+    
+}
+
+.header__wrapper {
+    max-width: 980px;
+    height: 100%;
+    line-height:200px;
+    line-height: 2.25em;
+    margin: 0 auto;
+    padding: 0.75em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    margin: 0 6px;
+}
+
+.content__container {
+    padding: 0.75em;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.content__wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.content__item {
+    border: 0.015em solid #676767;
+    border-radius: 0.875em;
+    height: 100%;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+.contact > ul > li > a > svg {
+    font-size: 4em;
+}
+
+.contact > ul > li { padding: 0.175em; }
+
+body > .footer__container {
+    padding: 1em;
+    background-color: #161b22;
+    text-align: center;
+    position: sticky;
+    top: 100vh;
+}
+
+@media screen and (max-width: 950px) {
+    .header__wrapper {
+        flex-direction: column;
+    }
+
+    .header__item {
+        text-align: center;
+    }
+
+    .badge {
+        flex-direction: column;
+    }
+}
