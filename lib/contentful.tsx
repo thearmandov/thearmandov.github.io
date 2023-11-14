@@ -9,6 +9,7 @@ const client = createClient({
 interface ContentfulEntryFields {
   title: string;
   content: object;
+  metaDescription: string
   // Add any other fields you need
 }
 
@@ -17,7 +18,6 @@ export interface ContentfulEntry extends Entry<ContentfulEntryFields> {}
 export const getSingleEntry = async (entryId: string): Promise<ContentfulEntry | null> => {
   try {
     const response = await client.getEntry<ContentfulEntryFields>(entryId);
-    console.log(response)
     return response as ContentfulEntry;
   } catch (error) {
     // Handle error, log, or throw as needed

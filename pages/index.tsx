@@ -15,8 +15,10 @@ const Home: React.FC<HomePageProps> = ({ entry }) => {
   }
 
   return (
-    <Layout home>
-      <h1>{entry.fields.title}</h1>
+    <Layout 
+      title={entry.fields.title}
+      description={entry.fields.metaDescription}
+    >
       <div>
         <RichText document={entry.fields.content} />
       </div>
