@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from './layout.module.scss';
 import utilStyles from '../styles/utils.module.scss';
+import Link from 'next/link'
 
 type LayoutProps = {
     title?: string
@@ -28,7 +29,11 @@ const Layout: React.FC<LayoutProps> = ({ title, description, children }) => {
             </Head>
 
             <header className={styles.header}>
-                <h1>Armando Villanueva</h1>
+                <h1 className={utilStyles.skinnyText}>Armando Villanueva</h1>
+                <div className={styles.navButtons}>
+                    <Link href="/blog">Blog</Link>
+                    <Link className={styles.linkButton} href="/contact">Contact Me</Link>
+                </div>
             </header>
             <main className={styles.container}>{children}</main>
         </>

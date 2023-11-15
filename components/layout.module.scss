@@ -1,5 +1,4 @@
 @import '../styles/variables';
-
 .container {
     max-width: 60rem;
     padding: 0 1rem;
@@ -7,8 +6,35 @@
 }
 
 .header {
+    width: 100%;
+    padding: 0 1em 0 1em;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content:space-between;
     align-items: center;
-    // background-color: $regalBlue;
+
+}
+
+.navButtons {
+    a {
+        padding: 1em;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.linkButton {
+    padding: 1em;
+    background-color: $tan;
+    color: $regalBlue !important;
+    border-radius: 1em;
+    border: 0.15em solid $burgandy;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+
+    &:hover {
+        opacity: 0.5;
+        transition: opacity 0.5s ease-in;
+    }
 }

@@ -26,3 +26,17 @@ export const getSingleEntry = async (entryId: string): Promise<ContentfulEntry |
     return null;
   }
 };
+
+
+export const getEntriesByType = async (contentType: string) => {
+  try {
+    const entries = await client.getEntries({
+      content_type: contentType
+    })
+
+    return entries.items
+  } catch (err) {
+    console.error('Error', err)
+    return null
+  }
+}

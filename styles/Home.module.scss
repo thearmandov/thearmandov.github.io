@@ -8,11 +8,12 @@
   align-items: center;
   margin: 0 auto;
   border: 1px solid $tanDarker;
+  margin-bottom: -50px;
   //box-shadow: 0 1em 2em rgba(0, 0, 0, 0.3); /* Box shadow below the blockquote */
 
   img {
     margin-right: 1em;
-    border-radius: 1em;
+    border-radius: 9em;
     border:1px solid $tanDarker;
     width: 12em;
     margin-left: -8em;
@@ -33,5 +34,49 @@
       margin-left: 0;
       margin-bottom: 1em;
     }
+  }
+}
+
+.featuredArticles {
+  width: 35em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  color: $regalBlue;
+  background-color: $tan;
+  box-shadow: 0 1em 2em rgba(0, 0, 0, 0.3);
+
+  h2 {
+    line-height: 0.15em;
+    padding: 0;
+    margin: 0.75em;
+  }
+
+  ul {
+    width: 100%;
+    margin: 0;
+    padding: 0.55em;
+    li {
+      list-style: none;
+      line-height: 1em;
+      margin: 0 ;
+      padding: 0.5em;
+      border-top: 1px solid $yogurt;
+
+      &:last-child {
+        border-bottom: 1px solid $yogurt;
+      }
+    }
+  }
+  a {
+    color: $regalBlue;
+  }
+
+  span {
+    background-color: $burgandy;
+    color: $yogurt;
+    padding: 0.25em;
+    border-radius: 3em;
   }
 }
