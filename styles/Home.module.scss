@@ -1,0 +1,37 @@
+@import './variables';
+
+.container {
+  max-width: 45em;
+  padding: 1em 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  border: 1px solid $tanDarker;
+  //box-shadow: 0 1em 2em rgba(0, 0, 0, 0.3); /* Box shadow below the blockquote */
+
+  img {
+    margin-right: 1em;
+    border-radius: 1em;
+    border:1px solid $tanDarker;
+    width: 12em;
+    margin-left: -8em;
+    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.3);
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+    
+    img {
+      margin-left: 0;
+      margin-bottom: 1em;
+    }
+  }
+}

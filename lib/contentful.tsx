@@ -9,7 +9,8 @@ const client = createClient({
 interface ContentfulEntryFields {
   title: string;
   content: object;
-  metaDescription: string
+  metaDescription: string;
+  featuredImage: object
   // Add any other fields you need
 }
 

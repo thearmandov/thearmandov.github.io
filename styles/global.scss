@@ -1,13 +1,17 @@
+
+@import './variables';
+@import './typography';
+
 html,
 body {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
-  font-size: 18px;
-  background-color: #1D1A1A;
-  color: #eeeeee;
+  background: $charcoal;
+  color: $yogurt;
 }
 
 * {
@@ -15,7 +19,7 @@ body {
 }
 
 a {
-  color: #0070f3;
+  color: $tan;
   text-decoration: none;
 }
 

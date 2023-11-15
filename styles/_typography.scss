@@ -1,0 +1,63 @@
+@import './variables';
+
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.25em;
+}
+
+p { font-size: 1.02em; }
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: $charcoal;
+    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.3); /* Box shadow below the blockquote */
+    padding: 1em 1em;
+    border-radius: 3px;
+    font-weight: bold;
+    color: $yogurt;
+}
+
+blockquote {
+    margin: 0;
+    padding: 20px;
+    background-color: $charcoal;
+    border-left: 4px solid $tan; /* Left border color */
+    color: $yogurt;
+    font-style: italic;
+    
+    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.3); /* Box shadow below the blockquote */
+  
+  }
+  
+  blockquote p {
+    margin: 0;
+  }
+
+  ul > li, ol > li {
+    line-height: 0.5em;
+  }
+
+  /* Apply basic styles to the table */
+table {
+    width: 100%;
+    line-height:.15em;
+    border-collapse: collapse;
+    margin-bottom: 1.25em;
+  }
+  
+  /* Style table header */
+  th, td {
+    padding: 0.89em;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: $regalBlue; /* Header background color */
+    color: white; /* Header text color */
+  }
+  
+  /* Add zebra striping to alternate rows */
+  tr:nth-child(even) {
+    background-color: #141414; /* Even row background color */
+  }

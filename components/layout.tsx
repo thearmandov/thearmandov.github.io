@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import styles from './layout.module.css';
-import utilStyles from '../styles/utils.module.css';
+import styles from './layout.module.scss';
+import utilStyles from '../styles/utils.module.scss';
 
 type LayoutProps = {
     title?: string
@@ -30,7 +30,7 @@ const Layout: React.FC<LayoutProps> = ({ title, description, children }) => {
             <header className={styles.header}>
                 <h1>Armando Villanueva</h1>
             </header>
-            <main>{children}</main>
+            <main className={styles.container}>{children}</main>
         </>
     )
 }
