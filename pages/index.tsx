@@ -28,7 +28,6 @@ interface HomePageProps {
 
 const Home: React.FC<HomePageProps> = ({ entry, featuredImage, articles }) => {
   if (!entry) {
-    // Loading state or error handling
     return <div>Loading...</div>;
   }
 

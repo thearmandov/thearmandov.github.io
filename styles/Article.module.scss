@@ -1,0 +1,15 @@
+@import '../styles/variables';
+
+.articleContainer {
+    padding: 1.25em;
+
+    .articleHeader {
+        border-bottom: 0.25em solid $burgandy;
+    }
+
+    .articleContent {
+        color: $yogurt;
+        line-height: 2em;
+    }
+}
+

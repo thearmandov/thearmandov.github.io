@@ -11,7 +11,6 @@ interface ContentfulEntryFields {
   content: object;
   metaDescription: string;
   featuredImage: object
-  // Add any other fields you need
 }
 
 export interface ContentfulEntry extends Entry<ContentfulEntryFields> {}
@@ -21,7 +20,6 @@ export const getSingleEntry = async (entryId: string): Promise<ContentfulEntry |
     const response = await client.getEntry<ContentfulEntryFields>(entryId);
     return response as ContentfulEntry;
   } catch (error) {
-    // Handle error, log, or throw as needed
     console.error('Error fetching entry:', error);
     return null;
   }
@@ -38,5 +36,38 @@ export const getEntriesByType = async (contentType: string) => {
   } catch (err) {
     console.error('Error', err)
     return null
+  }
+}
+
+export const getEntryBySlug = async (slug: string): Promise<Entry<any> | null> => {
+  try {
+    const entries = await client.getEntries({
+      content_type: 'article',
+      'fields.slug': slug,
+    })
+
+    if (entries.items.length >0) {
+      return entries.items[0]
+    }
+
+    return null
+  } catch(err) {
+    console.error('Error', err)
+    return null
+  }
+}
+
+export const getAllSlugs = async (): Promise<string[]> => {
+  try {
+    const entries = await client.getEntries({
+      content_type: 'article'
+    })
+
+    const slugs = entries.items.map((entry) => entry.fields.slug)
+    return slugs
+
+  } catch (err) {
+    console.error('Error', err)
+    return []
   }
 }

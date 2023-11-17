@@ -13,23 +13,31 @@ const Layout: React.FC<LayoutProps> = ({ title, description, children }) => {
         <>
             <Head>
             <link rel="icon" href="/favicon.ico" />
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <title>{title}</title>
             <meta
                 name="description"
                 content={description}
             />
-            <meta
-                property="og:image"
-                content={`https://og-image.vercel.app/${encodeURI(
-                    title,
-                )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-            />
-            <meta name="og:title" content={title} />
-            <meta name="twitter:card" content="summary_large_image" />
+                
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={description} />
+                <meta property="og:image" content="image-url.jpg"/>
+
+               
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content={title} />
+                <meta name="twitter:description" content={description} />
+                <meta name="twitter:image" content="image-url.jpg" />
             </Head>
 
             <header className={styles.header}>
-                <h1 className={utilStyles.skinnyText}>Armando Villanueva</h1>
+                <h1 className={utilStyles.skinnyText}>
+                    <Link href="/">
+                        Armando Villanueva
+                    </Link>
+                </h1>
                 <div className={styles.navButtons}>
                     <Link href="/blog">Blog</Link>
                     <Link className={styles.linkButton} href="/contact">Contact Me</Link>
