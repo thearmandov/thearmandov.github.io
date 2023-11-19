@@ -1,17 +1,26 @@
 import { Asset } from 'contentful'
 
 interface ContentfulImageProps {
-    asset: Asset | null,
-    className: string
+    fields : {
+        file: string | null, 
+        description: string | null
+    }
 }
 
-const ContentfulImage: React.FC<ContentfulImageProps> = ({ asset, className }) => {
+interface ImageProps {
+    asset: ContentfulImageProps,
+    className: string,
+    src: string,
+    alt: string
+}
+
+const ContentfulImage: React.FC<ImageProps> = ({ asset, className }) => {
     
-    const imageUrl = `https://${asset?.fields?.file?.url}`
-    const altText = asset?.fields?.description! || ''
+    const imageUrl = `https://${asset.fields.file.url!}`
+    const altText = asset.fields.description || ''
 
     return (
-        <img  className={className} src={imageUrl} alt={altText} />
+        <img  className={className} src={imageUrl} alt={ altText } />
     )
 }
 
