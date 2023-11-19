@@ -1,22 +1,11 @@
 
 import { GetStaticProps } from 'next';
-import { getSingleEntry, getEntriesByType, ContentfulEntry } from '../lib/contentful';
+import { getSingleEntry, ContentfulEntry } from '../lib/contentful';
 import Layout from '../components/layout'
 import styles from '../styles/About.module.scss'
-import utilStyles from '../styles/utils.module.scss'
-import Link from 'next/link'
-import Date from '../components/date'
+
 import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm';
-
-
-interface Article {
-  fields: {
-    title: string
-    body: string
-  }
-}
-
 
 interface HomePageProps {
   entry: ContentfulEntry | null;
