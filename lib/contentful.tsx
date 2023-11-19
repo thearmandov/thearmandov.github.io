@@ -1,9 +1,11 @@
 
+require('dotenv').config()
 import { createClient, Entry } from 'contentful';
+
 
 const client = createClient({
   space: 'g1d2xkvo3r1p',
-  accessToken: '4OFKuiDOBYK97ZN-dWwC5a3hGKlFNqAE9dvssWw0EfU',
+  accessToken: process.env.CONTENTFUL_CONTENT_DELIVERY_API,
 });
 
 interface ContentfulEntryFields {

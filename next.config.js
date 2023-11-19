@@ -1,8 +1,11 @@
 module.exports = {
-    webpack5: true,
-    webpack: (config) => {
-      config.resolve.fallback = { fs: false, path: false }
-  
-      return config
+    output: "export",
+    basePath: process.env.NODE_ENV === "production" ? "" : undefined,
+    eperimental: {
+      appDir: true
     },
-  }
+    images: {
+      unoptimized: true,
+    },
+    reactStrictMode: true
+}
