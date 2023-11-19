@@ -1,3 +1,5 @@
+@import './variables';
+
 .skinnyText {
   font-weight: 100;
 }
@@ -8,7 +10,16 @@
 
 
 .small {
-  font-size: 0.95em;
+  font-size: .95em;
+}
+
+.smaller {
+  font-size: 0.85em;
+
+}
+
+.darker {
+  color: $tanDarker;
 }
 
 .imgCenter {

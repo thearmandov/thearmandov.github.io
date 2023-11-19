@@ -13,7 +13,7 @@ const Layout: React.FC<LayoutProps> = ({ title, description, children }) => {
         <>
             <Head>
             <link rel="icon" href="/favicon.ico" />
-            <meta charset="UTF-8" />
+            <meta charSet="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <title>{title}</title>
             <meta
@@ -33,17 +33,33 @@ const Layout: React.FC<LayoutProps> = ({ title, description, children }) => {
             </Head>
 
             <header className={styles.header}>
-                <h1 className={utilStyles.skinnyText}>
-                    <Link href="/">
-                        Armando Villanueva
-                    </Link>
-                </h1>
-                <div className={styles.navButtons}>
-                    <Link href="/blog">Blog</Link>
-                    <Link className={styles.linkButton} href="/contact">Contact Me</Link>
-                </div>
+                <ul>
+                    <li>
+                        <Link href="/">
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/about">
+                            About
+                        </Link>
+                    </li>
+                    {/* <li>
+                        <Link href="/">
+                            Artwork
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/">
+                            Stories
+                        </Link>
+                    </li> */}
+                </ul>
             </header>
-            <main className={styles.container}>{children}</main>
+
+            <main className={styles.container}>
+                {children}
+            </main>
         </>
     )
 }

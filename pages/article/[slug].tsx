@@ -23,7 +23,10 @@ const PostPage: React.FC<EntryProps> = ({ entry, featuredImage }) => {
     >
       <article className={styles.articleContainer}>
         <div className={styles.articleHeader}>
-          <ContentfulImage className={utilStyles.imgCenter} asset={featuredImage} />
+          {featuredImage !== null && (
+            <ContentfulImage className={utilStyles.imgCenter} asset={featuredImage} />
+          )}
+         
           <h1 className={utilStyles.titleLarge}>{entry.fields.title}</h1>
           <div className={utilStyles.small}>
             <Date dateString={entry.fields.publishedDate} />
@@ -53,7 +56,7 @@ export const getStaticProps: GetStaticProps<EntryProps> = async ({ params }) => 
   }
 
   const entry = await getEntryBySlug(params.slug as string)
-  const featuredImage = entry?.fields.featuredImage
+  const featuredImage = entry?.fields.featuredImage || null
 
   if (!entry) return { notFound: true }
 
