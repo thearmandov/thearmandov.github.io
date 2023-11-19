@@ -17,6 +17,7 @@ interface EntryProps {
 
 const PostPage: React.FC<EntryProps> = ({ entry }) => {
   const { fields: {title = '', metaDescription = '', featuredImage = null} } = entry
+  console.log(featuredImage)
   return (
     <Layout
       title={`${title}`}
@@ -24,7 +25,7 @@ const PostPage: React.FC<EntryProps> = ({ entry }) => {
     >
       <article className={styles.articleContainer}>
         <div className={styles.articleHeader}>
-          {entry?.fields.featuredImage !== null && (
+          {entry?.fields.featuredImage != null && (
             <ContentfulImage className={utilStyles.imgCenter} asset={featuredImage} />
           )}
          
