@@ -16,14 +16,14 @@ const Home: React.FC<HomePageProps> = ({ entry }) => {
     return <div>Loading...</div>;
   }
 
-  const { fields: {title = '', metaDescription = ''} } = entry
+  const { fields: {title = '', metaDescription = '', body = ""} } = entry
   return (
     <Layout 
       title={`${title}`}
       description={`${metaDescription}` }
     > 
       <div className={styles.container}>
-        <ReactMarkdown remarkPlugins={[gfm]}>{entry.fields.body}</ReactMarkdown>
+        <ReactMarkdown remarkPlugins={[gfm]}>{`${body}`}</ReactMarkdown>
       </div>
     </Layout>
   );
