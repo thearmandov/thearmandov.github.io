@@ -12,6 +12,7 @@ interface ContentfulEntryFields {
   contentTypeId : string,
   fields: {
     title: string,
+    slug: string,
     body: string,
     content: object
     metaDescription: string

@@ -69,14 +69,15 @@ const { fields: {title = '', metaDescription = ''} } = entry
   );
 };
 
-export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
-  const entryId = '75dvRGS3EeFqIIUvEJyWNg'; //Home page
-  const entry = await getSingleEntry(entryId);
-  const articles = await getEntriesByType('article')
+export const getStaticProps = async () => {
+  const entryId = '75dvRGS3EeFqIIUvEJyWNg' //Home page
+  const entry = await getSingleEntry(entryId)
+  const articles = await getEntriesByType('article') 
+
   return {
     props: {
       entry,
-      articles
+      articles,
     },
   };
 };

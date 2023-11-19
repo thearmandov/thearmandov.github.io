@@ -7,11 +7,11 @@ import styles from '../styles/About.module.scss'
 import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm';
 
-interface HomePageProps {
+interface AboutPageProps {
   entry: ContentfulEntry | null;
 }
 
-const Home: React.FC<HomePageProps> = ({ entry }) => {
+const About: React.FC<AboutPageProps> = ({ entry }) => {
   if (!entry) {
     return <div>Loading...</div>;
   }
@@ -29,7 +29,7 @@ const Home: React.FC<HomePageProps> = ({ entry }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
+export const getStaticProps: GetStaticProps<AboutPageProps> = async () => {
   const entryId = '2q020Fnb6CSLGbIAOTlylo'; 
   const entry = await getSingleEntry(entryId);
   return {
@@ -39,4 +39,4 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
   };
 };
 
-export default Home;
+export default About;
