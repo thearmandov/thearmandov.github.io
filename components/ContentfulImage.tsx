@@ -1,5 +1,4 @@
 import { Asset } from 'contentful'
-import { documentToReactComponents} from '@contentful/rich-text-react-renderer'
 
 interface ContentfulImageProps {
     asset: Asset,
