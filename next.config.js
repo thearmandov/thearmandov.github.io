@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
     output: "export",
     basePath: process.env.NODE_ENV === "production" ? "" : undefined,
