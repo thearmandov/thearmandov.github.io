@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 module.exports = {
-    output: "export",
+    output: "out",
     basePath: process.env.NODE_ENV === "production" ? "" : undefined,
     experimental: {
       appDir: true
