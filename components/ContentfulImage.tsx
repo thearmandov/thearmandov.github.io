@@ -6,8 +6,8 @@ interface ContentfulImageProps {
 }
 
 const ContentfulImage: React.FC<ContentfulImageProps> = ({ asset, className }) => {
-    const imageUrl = `https://${asset?.fields.file.url}`
-    const altText = asset?.fields.description || ''
+    const imageUrl = `https://${asset?.fields?.file.url}`
+    const altText = asset?.fields?.description || ''
 
     return (
         <img  className={className} src={imageUrl} alt={altText} />
