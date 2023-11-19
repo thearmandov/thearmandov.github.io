@@ -68,7 +68,7 @@ export const getAllSlugs = async (): Promise<string[]> => {
       content_type: 'article'
     })
 
-    const slugs = entries.items.map((entry) => entry.fields.slug)
+    const slugs = entries.items.map((entry) => entry.fields.slug) as string[]
     return slugs
 
   } catch (err) {
