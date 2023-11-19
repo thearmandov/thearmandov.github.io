@@ -27,10 +27,11 @@ const Home: React.FC<HomePageProps> = ({ entry }) => {
     return <div>Loading...</div>;
   }
 
+  const { fields: {title = '', metaDescription = ''} } = entry
   return (
     <Layout 
-      title={entry.fields.title}
-      description={entry.fields.metaDescription}
+      title={`${title}`}
+      description={`${metaDescription}` }
     > 
       <div className={styles.container}>
         <ReactMarkdown remarkPlugins={[gfm]}>{entry.fields.body}</ReactMarkdown>

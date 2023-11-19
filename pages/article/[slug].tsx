@@ -16,10 +16,11 @@ interface EntryProps {
 }
 
 const PostPage: React.FC<EntryProps> = ({ entry, featuredImage }) => {
+  const { fields: {title = '', metaDescription = ''} } = entry
   return (
     <Layout
-      title={entry.fields.title}
-      description={entry.fields.metaDescription}
+      title={`${title}`}
+      description={`${metaDescription}` }
     >
       <article className={styles.articleContainer}>
         <div className={styles.articleHeader}>
