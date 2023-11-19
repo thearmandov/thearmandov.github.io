@@ -1,16 +1,14 @@
 import { Asset } from 'contentful'
 
-interface ContentfulImageProps {
-    fields : {
-        file: {
-            url: string | null
-        }
-        description: string | null
-    }
-}
-
 interface ImageProps {
-    asset: ContentfulImageProps,
+    asset: {
+        fields : {
+            file: {
+                url: string | null
+            }
+            description: string | null
+        }
+    },
     className: string,
     src: string,
     alt: string
