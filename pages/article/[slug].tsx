@@ -12,7 +12,7 @@ import gfm from 'remark-gfm';
 
 interface EntryProps {
   entry: any,
-  featuredImage: ContentfulImage | null
+  featuredImage: typeof ContentfulImage | null
 }
 
 const PostPage: React.FC<EntryProps> = ({ entry, featuredImage }) => {
