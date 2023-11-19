@@ -6,9 +6,6 @@ import styles from '../styles/Home.module.scss'
 import utilStyles from '../styles/utils.module.scss'
 import Link from 'next/link'
 import Date from '../components/date'
-import ReactMarkdown from 'react-markdown';
-import gfm from 'remark-gfm';
-
 
 interface Article {
   fields: {
