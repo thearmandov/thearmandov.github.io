@@ -1,7 +1,7 @@
 import { Asset } from 'contentful'
 
 interface ContentfulImageProps {
-    asset: Asset,
+    asset: Asset | null,
     className: string
 }
 
