@@ -10,8 +10,6 @@ import Date from '../components/date'
 interface Article {
   fields: {
     title: string | null
-    metaDescription: string | null,
-    content: string
     excerpt: string | null
     publishedDate: string
     slug: string
@@ -29,10 +27,13 @@ const Home: React.FC<HomePageProps> = ({ entry, articles }) => {
     return <div>Loading...</div>;
   }
 
+const { fields: {title = '', metaDescription = ''} } = entry
+
+ 
   return (
     <Layout 
-      title={entry.fields.title || ''}
-      description={entry.fields.metaDescription || ''}
+      title={`${title}`}
+      description={`${metaDescription}` }
     > 
       <h1 className={utilStyles.skinnyText}> Armando Villanueva </h1>
       <br/>

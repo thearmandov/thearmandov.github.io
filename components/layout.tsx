@@ -4,8 +4,8 @@ import utilStyles from '../styles/utils.module.scss';
 import Link from 'next/link'
 
 type LayoutProps = {
-    title?: string
-    description?: string
+    title: string
+    description: string
     children: React.ReactNode
 }
 
