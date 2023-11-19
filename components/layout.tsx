@@ -6,6 +6,7 @@ import Link from 'next/link'
 type LayoutProps = {
     title?: string
     description: string
+    children: React.ReactNode
 }
 
 const Layout: React.FC<LayoutProps> = ({ title, description, children }) => {
