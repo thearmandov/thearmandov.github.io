@@ -10,13 +10,13 @@ import { getAllSlugs, getEntryBySlug } from '../../lib/contentful'
 import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm';
 
+
 interface EntryProps {
-  entry: any,
-  featuredImage: any
+  entry: any
 }
 
-const PostPage: React.FC<EntryProps> = ({ entry, featuredImage }) => {
-  const { fields: {title = '', metaDescription = ''} } = entry
+const PostPage: React.FC<EntryProps> = ({ entry }) => {
+  const { fields: {title = '', metaDescription = '', featuredImage = null} } = entry
   return (
     <Layout
       title={`${title}`}
@@ -24,7 +24,7 @@ const PostPage: React.FC<EntryProps> = ({ entry, featuredImage }) => {
     >
       <article className={styles.articleContainer}>
         <div className={styles.articleHeader}>
-          {featuredImage !== null && (
+          {entry?.fields.featuredImage !== null && (
             <ContentfulImage className={utilStyles.imgCenter} asset={featuredImage} />
           )}
          
@@ -57,14 +57,11 @@ export const getStaticProps: GetStaticProps<EntryProps> = async ({ params }) => 
   }
 
   const entry = await getEntryBySlug(params.slug as string)
-  const featuredImage = entry?.fields.featuredImage || null
-  console.log(featuredImage)
   if (!entry) return { notFound: true }
 
   return {
     props: { 
-      entry, 
-      featuredImage
+      entry,
     }
   }
 }

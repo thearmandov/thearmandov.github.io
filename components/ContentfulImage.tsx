@@ -2,9 +2,7 @@ import { Asset } from 'contentful'
 
 interface ContentfulImageProps {
     asset: Asset | null,
-    className: string,
-    src: string,
-    alt: string | null
+    className: string
 
 }
 
