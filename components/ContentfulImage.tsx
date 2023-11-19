@@ -1,7 +1,15 @@
 import { Asset } from 'contentful'
 
 interface ContentfulImageProps {
-    asset: Asset | null,
+    asset: {
+        fields: {
+            sys: string, 
+            fields: {
+                file : { url: string }
+            },
+            metaData: string | null
+        }
+    },
     className: string,
     src: string,
     alt: string | null
