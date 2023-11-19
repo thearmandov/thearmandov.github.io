@@ -6,17 +6,13 @@ interface ContentfulImageProps {
 }
 
 const ContentfulImage: React.FC<ContentfulImageProps> = ({ asset, className }) => {
-    if (asset != null) {
-        const imageUrl = `https://${asset.fields.file.url}`
-        const altText = asset.fields.description || ''
     
-        return (
-            <img  className={className} src={imageUrl} alt={altText} />
-        )
-    } else {
-        return ("")
-    }
+    const imageUrl = `https://${asset?.fields?.file?.url}`
+    const altText = asset?.fields?.description || ''
 
+    return (
+        <img  className={className} src={imageUrl} alt={altText} />
+    )
 }
 
 export default ContentfulImage
