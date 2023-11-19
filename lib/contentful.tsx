@@ -11,9 +11,9 @@ const client = createClient({
 interface ContentfulEntryFields {
   contentTypeId : string,
   fields: {
-    title: string;
-    content: object;
-    metaDescription: string;
+    title: string
+    content: object
+    metaDescription: string
     featuredImage: object
   }
 }

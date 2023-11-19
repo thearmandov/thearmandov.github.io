@@ -9,7 +9,8 @@ import Date from '../components/date'
 
 interface Article {
   fields: {
-    title: string
+    title: string | null
+    metaDescription: string | null,
     content: string
     excerpt: string | null
     publishedDate: string
@@ -20,19 +21,18 @@ interface Article {
 
 interface HomePageProps {
   entry: ContentfulEntry | null
-  featuredImage: ContentfulImage | null
   articles: Article[]
 }
 
-const Home: React.FC<HomePageProps> = ({ entry, featuredImage, articles }) => {
+const Home: React.FC<HomePageProps> = ({ entry, articles }) => {
   if (!entry) {
     return <div>Loading...</div>;
   }
 
   return (
     <Layout 
-      title={entry.fields.title}
-      description={entry.fields.metaDescription}
+      title={entry.fields.title || ''}
+      description={entry.fields.metaDescription || ''}
     > 
       <h1 className={utilStyles.skinnyText}> Armando Villanueva </h1>
       <br/>
@@ -71,12 +71,10 @@ const Home: React.FC<HomePageProps> = ({ entry, featuredImage, articles }) => {
 export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
   const entryId = '75dvRGS3EeFqIIUvEJyWNg'; //Home page
   const entry = await getSingleEntry(entryId);
-  const featuredImage = entry?.fields.featuredImage
   const articles = await getEntriesByType('article')
   return {
     props: {
       entry,
-      featuredImage,
       articles
     },
   };

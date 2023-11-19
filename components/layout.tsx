@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 type LayoutProps = {
     title?: string
-    description: string
+    description?: string
     children: React.ReactNode
 }
 
