@@ -2,7 +2,9 @@ import { Asset } from 'contentful'
 
 interface ContentfulImageProps {
     fields : {
-        file: string | null, 
+        file: {
+            url: string | null
+        }
         description: string | null
     }
 }
