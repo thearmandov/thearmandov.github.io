@@ -1,0 +1,51 @@
+@import './variables';
+
+.container {
+  max-width: 45em;
+  padding: 1em 0.5rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  list-style-type: none;
+
+  ul { margin: 1em 1em 1em 0;}
+  ul > li {
+    list-style: none;
+    line-height: 1.6em;
+    padding: 1.25em;
+    border: 0.15em $tan solid;
+    margin-bottom: 1em;
+    a {
+      font-size: 1.25em;
+      line-height: .25em;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  p {
+    margin: 0;
+  }
+  h2.listTitle {
+    background-color: $tan;
+    position: relative;
+    color: $regalBlue;
+    display: inline-block;
+    line-height: 1.25em;
+    padding: .25em;
+    margin: 0;
+  }
+  .postList {
+    border-inline-start: .10em $tan solid;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+
+    margin-bottom: 1em;
+  }
+}

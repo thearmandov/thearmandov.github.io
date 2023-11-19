@@ -1,0 +1,36 @@
+
+@import './variables';
+@import './typography';
+
+html,
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 1.6;
+  background: $charcoal;
+  color: $yogurt;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: $tan;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  h1, h2, h3, h4, h5, h6 { line-height: 1.2em; }
+}
