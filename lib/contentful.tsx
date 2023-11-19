@@ -5,7 +5,7 @@ import { createClient, Entry } from 'contentful';
 
 const client = createClient({
   space: 'g1d2xkvo3r1p',
-  accessToken: process.env.CONTENTFUL_CONTENT_DELIVERY_API,
+  accessToken: process.env.CONTENTFUL_CONTENT_DELIVERY_API!,
 });
 
 interface ContentfulEntryFields {
