@@ -9,10 +9,13 @@ const client = createClient({
 });
 
 interface ContentfulEntryFields {
-  title: string;
-  content: object;
-  metaDescription: string;
-  featuredImage: object
+  contentTypeId : string,
+  fields: {
+    title: string;
+    content: object;
+    metaDescription: string;
+    featuredImage: object
+  }
 }
 
 export interface ContentfulEntry extends Entry<ContentfulEntryFields> {}
