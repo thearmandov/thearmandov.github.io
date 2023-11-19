@@ -12,7 +12,7 @@ import gfm from 'remark-gfm';
 
 interface EntryProps {
   entry: any,
-  featuredImage: typeof ContentfulImage | null
+  featuredImage: any
 }
 
 const PostPage: React.FC<EntryProps> = ({ entry, featuredImage }) => {
@@ -58,7 +58,7 @@ export const getStaticProps: GetStaticProps<EntryProps> = async ({ params }) => 
 
   const entry = await getEntryBySlug(params.slug as string)
   const featuredImage = entry?.fields.featuredImage || null
-
+  console.log(featuredImage)
   if (!entry) return { notFound: true }
 
   return {
