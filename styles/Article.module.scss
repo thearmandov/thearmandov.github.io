@@ -3,6 +3,9 @@
 .articleContainer {
     padding: 1.25em;
 
+    ul > li, ol > li {
+        line-height: 1.55em;
+    }
     .articleHeader {
         border-bottom: 0.25em solid $burgandy;
     }
