@@ -70,7 +70,7 @@ const { fields: {title = '', metaDescription = ''} } = entry
 };
 
 export const getStaticProps = async () => {
-  const entryId = '75dvRGS3EeFqIIUvEJyWNg' //Home page
+  const entryId = '75dvRGS3EeFqIIUvEJyWNg' //Home
   const entry = await getSingleEntry(entryId)
   const articles = await getEntriesByType('article') 
 
