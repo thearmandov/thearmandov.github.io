@@ -4,7 +4,7 @@ import { createClient, Entry } from 'contentful';
 
 
 const client = createClient({
-  space: process.env.CONTENTFUL_SPACE_ID!,
+  space: 'g1d2xkvo3r1p',
   accessToken: process.env.CONTENTFUL_CONTENT_DELIVERY_API!,
 });
 
