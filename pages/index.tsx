@@ -41,7 +41,7 @@ const { fields: {title = '', metaDescription = ''} } = entry
       <div className={styles.container}>
         {/* <ReactMarkdown remarkPlugins={[gfm]}>{entry.fields.body}</ReactMarkdown> */}
         <br />
-          {/* <div className={styles.postList}>
+          <div className={styles.postList}>
             <div>
               <h2 className={`${styles.listTitle} ${utilStyles.skinnyText}`}>LATEST POSTS</h2>
             </div>
@@ -63,21 +63,21 @@ const { fields: {title = '', metaDescription = ''} } = entry
                   </li>
               ))}
             </ul>
-          </div> */}
+          </div>
       </div>
     </Layout>
   );
 };
 
 export const getStaticProps = async () => {
-  const entryId = '3QvHo6ynrQ8yVbF6fJbsjM' //Home page
+  const entryId = '75dvRGS3EeFqIIUvEJyWNg' //Home
   const entry = await getSingleEntry(entryId)
-  // const articles = await getEntriesByType('article') 
+  const articles = await getEntriesByType('article') 
 
   return {
     props: {
       entry,
-      // articles,
+      articles,
     },
   };
 };
