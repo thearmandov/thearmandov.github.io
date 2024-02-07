@@ -30,7 +30,7 @@ const About: React.FC<AboutPageProps> = ({ entry }) => {
 };
 
 export const getStaticProps: GetStaticProps<AboutPageProps> = async () => {
-  const entryId = '2q020Fnb6CSLGbIAOTlylo'; 
+  const entryId = '2q020Fnb6CSLGbIAOTlylo'; //About
   const entry = await getSingleEntry(entryId);
   return {
     props: {
